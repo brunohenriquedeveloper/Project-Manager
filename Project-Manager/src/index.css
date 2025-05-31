@@ -6,6 +6,6 @@
 }
 
 html, body, #root {
-  background-color: #efefef;
+  background: linear-gradient(to right, #221e1d, #232020);
   height: 100%;
 }
