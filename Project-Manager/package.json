@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "backend": "json-server --watch db.json --port 5000",
     "prepare": "husky install",
     "dev": "vite",
     "build": "vite build",
