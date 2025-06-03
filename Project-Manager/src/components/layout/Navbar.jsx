@@ -10,7 +10,7 @@ function Navbar(){
     return (
         <nav className={styles.navbar}>
         <Container>
-        <Link to="/"><img src={logo} alt="TaskFlow" srcset="" /></Link>
+        <Link to="/"><img src={logo} alt="TaskFlow" srcSet="" /></Link>
 
     <ul className={styles.list}>
         <li>

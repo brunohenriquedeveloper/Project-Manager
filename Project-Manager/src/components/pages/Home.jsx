@@ -8,7 +8,7 @@ function Home(){
             <h1>Bem-vindo ao <span>TaskFlow</span></h1>
             <p>Comece a gerenciar os seus projetos agora mesmo!</p>
             <LinkButton to= "/newproject" text="Criar Projeto" />
-            <img src={savings} alt="TaskFlow" srcset="" />
+            <img src={savings} alt="TaskFlow" srcSet="" />
         </section>
     )
 }
