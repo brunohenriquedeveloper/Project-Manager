@@ -2,11 +2,11 @@
   "projects": [
     {
       "id": "13f3",
-      "name": "Teste",
-      "budget": "5050",
+      "name": "Construção de um Software",
+      "budget": "1300",
       "category": {
-        "id": "1",
-        "name": "Infraestrutura"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": []
