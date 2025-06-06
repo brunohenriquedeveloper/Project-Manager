@@ -8,25 +8,13 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 800,
+      "cost": 1220,
       "services": [
         {
-          "name": "Recrutar Desenvolvedores",
-          "cost": "200",
-          "description": "Encontrar trabalhadores especializados na construção de software",
-          "id": "48edb050-58b9-4268-b562-ef5fb9c2e126"
-        },
-        {
-          "name": "Construção de um Software",
-          "cost": "200",
-          "description": "dinheiro destinado a construção de um software",
-          "id": "bdfc2384-1b4e-44df-ad39-c2956f4d939b"
-        },
-        {
           "name": "Teste",
-          "cost": "400",
-          "description": "teste ",
-          "id": "f5f0789c-e062-4196-829c-7e3e195d16aa"
+          "cost": "1220",
+          "description": "Encontrar trabalhadores especializados na construção de software",
+          "id": "145fab44-ad25-4bf2-af7c-2c48201212f3"
         }
       ]
     }

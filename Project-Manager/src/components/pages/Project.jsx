@@ -31,7 +31,9 @@ function Project() {
             },
         }).then(resp => resp.json()).catch(err => console.log(err)).then((data) => {
             setProject(data)
+            setServices(data.services || [])
         })
+        .catch(err => console.log(err))
         }, 300)
 
     }, [id])
@@ -100,15 +102,52 @@ function Project() {
         }).then((resp) => resp.json()
         .then((data) => {
             setShowServiceForm(false)
+            setProject(data)
+            setServices(data.services)
+
         })
         ).catch(err => console.log(err))
 
     }
 
 
-    function removeService() {
-        setShowServiceForm(!showServiceForm)
+    function removeService(id, cost) {
+    setMessage('')
+
+    // Filtra os serviços atualizados (remove o que tem o ID)
+    const updatedServices = project.services.filter(service => service.id !== id)
+
+    // Recalcula o custo com base nos serviços que restaram
+    const updatedCost = updatedServices.reduce(
+        (total, service) => total + parseFloat(service.cost), 0
+    )
+
+    // Atualiza o projeto com os novos dados
+    const updatedProject = {
+        ...project,
+        services: updatedServices,
+        cost: updatedCost
     }
+
+    // Atualiza no servidor
+    fetch(`http://localhost:5000/projects/${project.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedProject)
+    })
+    .then((resp) => resp.json())
+    .then((data) => {
+        setProject(data) // importante: usar o retorno do servidor
+        setServices(data.services || []) // garante que o estado seja atualizado
+        setMessage('Serviço removido com sucesso!')
+        setType('success')
+    })
+    .catch(err => console.log(err))
+}
+
+
     return (
 
        <>
@@ -170,7 +209,7 @@ function Project() {
                 cost = {service.cost}
                 description = {service.description}
                 key = {service.key}
-                handleRemove = {removeService}
+                handleRemove={() => removeService(service.id, service.cost)}
                 />
             ))} 
             {services.length === 0 && <p>Não há serviços cadastrados.</p>}
