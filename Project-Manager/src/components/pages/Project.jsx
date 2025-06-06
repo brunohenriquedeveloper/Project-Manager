@@ -7,6 +7,7 @@ import Container from '../layout/Container'
 import ProjectForm from '../project/ProjectForm'
 import ServiceForm from '../service/ServiceForm'
 import Message from '../layout/message'
+import ServiceCard from '../service/ServiceCard'
 
 function Project() {
 
@@ -14,6 +15,7 @@ function Project() {
     const cleanedId = id.trim()
 
     const [project, setProject] = useState({})
+    const [services, setServices] = useState({})
     const [showProjectForm, setShowProjectForm] = useState(false)
     const [showServiceForm, setShowServiceForm] = useState(false)
     const [message, setMessage] = useState()
@@ -73,7 +75,7 @@ function Project() {
 
 
         const lastService = project.services[project.services.length -1]
-
+ 
         lastService.id = uuidv4()
 
         const lastServiceCost = lastService.cost
@@ -97,12 +99,16 @@ function Project() {
             body: JSON.stringify(project)
         }).then((resp) => resp.json()
         .then((data) => {
-            console.log(data)
+            setShowServiceForm(false)
         })
         ).catch(err => console.log(err))
 
     }
 
+
+    function removeService() {
+        setShowServiceForm(!showServiceForm)
+    }
     return (
 
        <>
@@ -157,7 +163,17 @@ function Project() {
         </div>
         <h2>Serviços</h2>
         <Container customClass="start">
-            <p>Itens de serviços</p>
+            {services.length > 0 && services.map((service) => (
+                <ServiceCard 
+                id = {service.id}
+                name = {service.name}
+                cost = {service.cost}
+                description = {service.description}
+                key = {service.key}
+                handleRemove = {removeService}
+                />
+            ))} 
+            {services.length === 0 && <p>Não há serviços cadastrados.</p>}
         </Container>
         </Container>
 
