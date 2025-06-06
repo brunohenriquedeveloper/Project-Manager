@@ -114,22 +114,18 @@ function Project() {
     function removeService(id, cost) {
     setMessage('')
 
-    // Filtra os serviços atualizados (remove o que tem o ID)
     const updatedServices = project.services.filter(service => service.id !== id)
 
-    // Recalcula o custo com base nos serviços que restaram
     const updatedCost = updatedServices.reduce(
         (total, service) => total + parseFloat(service.cost), 0
     )
 
-    // Atualiza o projeto com os novos dados
     const updatedProject = {
         ...project,
         services: updatedServices,
         cost: updatedCost
     }
 
-    // Atualiza no servidor
     fetch(`http://localhost:5000/projects/${project.id}`, {
         method: 'PATCH',
         headers: {
@@ -139,8 +135,8 @@ function Project() {
     })
     .then((resp) => resp.json())
     .then((data) => {
-        setProject(data) // importante: usar o retorno do servidor
-        setServices(data.services || []) // garante que o estado seja atualizado
+        setProject(data) 
+        setServices(data.services || []) 
         setMessage('Serviço removido com sucesso!')
         setType('success')
     })
