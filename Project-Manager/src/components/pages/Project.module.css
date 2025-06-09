@@ -19,4 +19,8 @@
         flex-direction: column;
         gap: 1em;
     }
+
+    .title_container h1 {
+        align-self: center;
+    }
 }

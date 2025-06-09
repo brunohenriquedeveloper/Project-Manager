@@ -8,6 +8,7 @@
 }
 
 .home_container h1 {
+    align-self: center;
     font-size: 2.5em;
     margin-bottom: .5em;
     color: aliceblue;
@@ -15,7 +16,7 @@
 
 .home_container h1 span {
     color: #F9DB11;
-    padding: 0.2 em;
+    padding: 0.2em;
 }
 
 .home_container p {
@@ -28,9 +29,11 @@
     margin: 2em 0;
 }
 
-@media screen and (max-width:325px) {
+@media screen and (max-width:426px) {
     .home_container h1 {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
+        padding-left: .5em;
+        padding-right: .5em;
     }
 
     .home_container img {
@@ -39,5 +42,11 @@
 
     .home_container p {
     font-size: .9rem;
+    padding-left: 1em;
+    padding-right: .5em;
+    }
+
+    .home_container {
+        padding: 0;
     }
 }
