@@ -27,3 +27,17 @@
     width: 350px;
     margin: 2em 0;
 }
+
+@media screen and (max-width:325px) {
+    .home_container h1 {
+        font-size: 1.9rem;
+    }
+
+    .home_container img {
+        width: 300px;
+    }
+
+    .home_container p {
+    font-size: .9rem;
+    }
+}

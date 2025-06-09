@@ -20,3 +20,18 @@
 .item:hover {
     color: #F9DB11;
 }
+
+@media screen and (max-width: 375px) {
+    .list {
+        font-size: .8rem;
+        font-weight: bold;
+    }
+
+    .item {
+        margin-right: .5em;
+    }
+
+    .navbar img {
+        width: 40px;
+    }
+}

@@ -4,6 +4,7 @@
     border-radius: 5px;
     width: 24%;
     margin: 0.5%;
+    margin-bottom: 1em;
 }
 
 .project_card h4 {
@@ -86,3 +87,8 @@ background-color: #fbe7c6;
     color: #ffbb33;
 }
 
+@media screen and (max-width: 1300px) {
+    .project_card {
+        width: 100%;
+    }
+}
