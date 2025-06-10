@@ -89,6 +89,12 @@ background-color: #fbe7c6;
 
 @media screen and (max-width: 1300px) {
     .project_card {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .project_card {
         width: 100%;
     }
 }
