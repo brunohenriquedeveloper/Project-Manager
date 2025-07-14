@@ -23,7 +23,7 @@ function Company(){
             </div>
 
             <div>
-            <h3>17</h3>
+            <h3>+17k</h3>
             <h4>Projetos Gerenciados</h4>
             </div>
 
