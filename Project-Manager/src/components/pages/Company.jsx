@@ -1,5 +1,47 @@
-function Home(){
-    return <h1>Company</h1>
+import styles from "./Company.module.css"
+
+function Company(){
+    return(
+        <div className={styles.conteinerCompany}>
+
+            <div className={styles.leftCompany}>
+            <h4>Onde tudo começou</h4>
+            <h2>Nosso Objetivo é Tornar um Mundo Caótico um Pouco Mais Organizado!</h2>
+            <p>Em 2023, um grupo de desenvolvedores apaixonados por tecnologia decidiu criar uma plataforma inovadora para gerenciar projetos de forma eficiente e colaborativa. Com o objetivo de simplificar a gestão de tarefas e melhorar a comunicação entre equipes, nasceu o Project Manager.</p>
+            </div>
+
+            <div className={styles.rightCompany}>
+            <div className={styles.imgCompany}>
+            // Aqui você pode adicionar uma imagem ou qualquer outro conteúdo relevante
+            </div>
+
+            <div className={styles.DataCompany}>
+
+            <div>
+            <h3>2.5</h3>
+            <h4>Anos de Experiência</h4>
+            </div>
+
+            <div>
+            <h3>17</h3>
+            <h4>Projetos Gerenciados</h4>
+            </div>
+
+            
+            <div>
+            <h3>+150</h3>
+            <h4>Avaliações Positivas</h4>
+            </div>
+
+            <div>
+            <h3>+1.630</h3>
+            <h4>Usuários Ativos</h4>
+            </div>
+            </div>
+
+            </div>
+        </div>
+    ) 
 }
 
-export default Home
+export default Company
