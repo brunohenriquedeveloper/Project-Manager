@@ -1,0 +1,46 @@
+.conteinerCompany {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.leftCompany {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.leftCompany p {
+    display: none;
+}
+
+.leftCompany h4 {
+    color: #F9DB11;
+    align-self: flex-start;
+    font-size: .8rem;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+.leftCompany h2 {
+    font-size: 2rem;
+    align-self: center;
+}
+
+.rightCompany {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgCompany img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
