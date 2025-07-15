@@ -1,4 +1,5 @@
 import styles from "./Company.module.css"
+import companyImg from '../../img/Company-img.jpg';
 
 function Company(){
     return(
@@ -12,7 +13,7 @@ function Company(){
 
             <div className={styles.rightCompany}>
             <div className={styles.imgCompany}>
-            // Aqui você pode adicionar uma imagem ou qualquer outro conteúdo relevante
+            <img src={companyImg} alt="Imagem da empresa" />
             </div>
 
             <div className={styles.DataCompany}>
