@@ -21,14 +21,22 @@
 .leftCompany h4 {
     color: #F9DB11;
     align-self: flex-start;
-    font-size: .8rem;
-    padding-left: 1em;
-    padding-bottom: 1em;
+    font-size: .65rem;
+    margin-left: 1em;
+    margin-bottom: .75em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: rgb(11, 11, 11);
+    padding: .5em;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.029);
+
 }
 
 .leftCompany h2 {
-    font-size: 2rem;
-    align-self: center;
+    font-size: 2.2rem;
+    text-align: center;
+    padding-bottom: .5em;
 }
 
 .rightCompany {
@@ -42,5 +50,33 @@
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border-radius: 10px;
+}
+
+.DataCompany {
+    margin-top: 1em;
+    width: 90%;
+}
+
+.databox {
+    background-color: rgb(37, 37, 37);
+    width: 100%;
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    border-right: 10px solid #f9db11;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.databox h3 {
+    color: #F9DB11;
+    font-size: 2.3rem;
+    margin-left: 1em;
+}
+
+.databox h4 {
+    color: #F9DB11;
+    font-size: .8rem;
+    margin-top: .5em;
+    margin-left: 3em;
+
 }
