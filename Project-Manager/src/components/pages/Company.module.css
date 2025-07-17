@@ -88,6 +88,26 @@
     
 }
 
+@media screen and (min-width: 530px) {
+    .conteinerCompany {
+        width: 500px;
+        padding-bottom: 2em;
+        margin: 0 auto;
+    }
+
+    .imgCompany img {
+        border-radius: 10px;
+    }
+
+    .DataCompany {
+        width: 100%;
+    }
+
+    .leftCompany h2 {
+        font-size: 3rem;
+    }
+}
+
 @media screen and (min-width: 767px) {
     .conteinerCompany {
     display: flex;
