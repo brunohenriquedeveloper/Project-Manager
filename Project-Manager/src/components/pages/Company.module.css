@@ -34,7 +34,7 @@
 }
 
 .leftCompany h2 {
-    font-size: 2.2rem;
+    font-size: 2.05rem;
     text-align: center;
     padding-bottom: .5em;
 }
@@ -54,7 +54,7 @@
 
 .DataCompany {
     margin-top: 1em;
-    width: 90%;
+    width: 95%;
 }
 
 .databox {
@@ -79,4 +79,11 @@
     margin-top: .5em;
     margin-left: 3em;
 
+}
+
+@media screen and (min-width: 424px) {
+    .leftCompany h2 {
+        font-size: 2.4rem;
+    }
+    
 }
