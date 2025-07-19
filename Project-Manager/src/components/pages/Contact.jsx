@@ -1,6 +1,7 @@
 import Submit from "../form/Submit"
 import styles from "./Contact.module.css"
 import Input from "../form/input"
+import contactImg from '../../img/Contact-img.jpg';
 
 function Contact(){
 
@@ -10,6 +11,7 @@ function Contact(){
 
 
     return (
+        <div className={styles.conteiner_Contact}>
         <div className={styles.conteiner_form}>
         <form onSubmit={Submit} className={styles.contact_form}>
             <h2>Entre em Contato:</h2>
@@ -39,7 +41,11 @@ function Contact(){
            
             <Submit text = "Enviar"/>
         </form>
-        
+         </div>
+        <div className={styles.Contact_img}>
+            <img src={contactImg} alt="Imagem do contato" />
+        </div>
+       
         </div>
     )
 }
