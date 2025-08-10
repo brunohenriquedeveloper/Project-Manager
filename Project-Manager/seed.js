@@ -4,6 +4,10 @@ import Project from './models/Project.js';
 
 const uri = 'mongodb+srv://BrunoUser:senha1234@cluster0.fxtnbbg.mongodb.net/projectManager?retryWrites=true&w=majority';
 
+app.get('/', (req, res) => {
+  res.send('Backend está funcionando!');
+});
+
 const categories = [
   { id: "1", name: "Infraestrutura" },
   { id: "2", name: "Desenvolvimento" },
