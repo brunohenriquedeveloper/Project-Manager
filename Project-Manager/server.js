@@ -8,6 +8,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+console.log('Deploy versão X rodando!');
+
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = 'mongodb+srv://BrunoUser:senha1234@cluster0.fxtnbbg.mongodb.net/projectManager?retryWrites=true&w=majority';
 
