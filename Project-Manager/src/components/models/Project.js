@@ -1,21 +1,19 @@
 import mongoose from 'mongoose';
 
 const ServiceSchema = new mongoose.Schema({
-  id: String,
-  name: String,
-  cost: Number,
-  description: String,
+  name: { type: String, required: true },
+  cost: { type: Number, required: true },
+  description: { type: String },
 });
 
 const ProjectSchema = new mongoose.Schema({
-  id: String,
-  name: String,
-  budget: Number,
+  name: { type: String, required: true },
+  budget: { type: Number, required: true },
   category: {
-    id: String,
-    name: String,
+    id: { type: String },
+    name: { type: String },
   },
-  cost: Number,
+  cost: { type: Number, default: 0 },
   services: [ServiceSchema],
 });
 
