@@ -9,7 +9,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.js"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.5.0",
@@ -39,7 +40,7 @@
     "vite": "^6.3.5"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "main": "commitlint.config.js",
+  "main": "server.js",
   "keywords": [],
   "author": "",
   "license": "ISC"
