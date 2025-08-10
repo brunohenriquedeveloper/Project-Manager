@@ -40,7 +40,7 @@ app.get('/projects', async (req, res) => {
 // Rota para pegar um projeto pelo id
 app.get('/projects/:id', async (req, res) => {
   try {
-    const project = await Project.findOne({ id: req.params.id });
+    const project = await Project.findById(req.params.id);
     if (!project) return res.status(404).json({ message: 'Projeto não encontrado' });
     res.json(project);
   } catch (err) {
