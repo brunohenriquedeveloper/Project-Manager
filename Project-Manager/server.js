@@ -1,8 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import Project from './models/Project.js'; // seu model de Project
-import Category from './models/Category.js'; // seu model de Category
+import Project from './src/components/models/Project.js';
+import Category from './src/components/models/Category.js';
 
 const app = express();
 app.use(cors());
