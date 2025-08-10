@@ -13,14 +13,12 @@ const categories = [
 
 const projects = [
   {
-    id: "13f3",
     name: "Construção de um Software",
     budget: 1300,
     category: { id: "2", name: "Desenvolvimento" },
     cost: 1220,
     services: [
       {
-        id: "145fab44-ad25-4bf2-af7c-2c48201212f3",
         name: "Teste",
         cost: 1220,
         description: "Encontrar trabalhadores especializados na construção de software"
@@ -28,7 +26,6 @@ const projects = [
     ]
   },
   {
-    id: "b915",
     name: "Construção de um Software",
     budget: 3000,
     category: { id: "2", name: "Desenvolvimento" },
@@ -36,7 +33,6 @@ const projects = [
     services: []
   },
   {
-    id: "1544",
     name: "Construção de um Software",
     budget: 3000,
     category: { id: "3", name: "Design" },

@@ -48,22 +48,11 @@ app.get('/projects/:id', async (req, res) => {
   }
 });
 
-// Rota para criar um novo projeto
-app.post('/projects', async (req, res) => {
-  try {
-    const project = new Project(req.body);
-    await project.save();
-    res.status(201).json(project);
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
-});
-
-// Rota para atualizar um projeto (PATCH)
+// Atualizar projeto pelo _id (troca findOneAndUpdate por findByIdAndUpdate)
 app.patch('/projects/:id', async (req, res) => {
   try {
-    const project = await Project.findOneAndUpdate(
-      { id: req.params.id },
+    const project = await Project.findByIdAndUpdate(
+      req.params.id,
       req.body,
       { new: true }
     );
@@ -74,10 +63,10 @@ app.patch('/projects/:id', async (req, res) => {
   }
 });
 
-// Rota para deletar um projeto
+// Deletar projeto pelo _id (troca findOneAndDelete por findByIdAndDelete)
 app.delete('/projects/:id', async (req, res) => {
   try {
-    const project = await Project.findOneAndDelete({ id: req.params.id });
+    const project = await Project.findByIdAndDelete(req.params.id);
     if (!project) return res.status(404).json({ message: 'Projeto não encontrado' });
     res.json({ message: 'Projeto removido com sucesso!' });
   } catch (err) {
