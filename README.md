@@ -8,12 +8,12 @@
   <table>
   <tr>
     <td>
-      <h4><em>Mobile Design</em></h4>
+      <h4><em>Mobile Main Page</em></h4>
       <img width="400px" src="Mobile-Main.png">
     </td>
     <td>
-      <h4><em>Mobile Menu</em></h4>
-      <img width="400px" src="Mobile-Main.png">
+      <h4><em>Mobile Project Page</em></h4>
+      <img width="400px" src="Mobile Project.png">
     </td>
   </tr>
 </table>
@@ -58,6 +58,8 @@ The application was built using React for the front end, implementing dynamic co
 In addition to React and back-end development, I also applied HTML and CSS to structure and style the application, making it both functional and visually appealing.
 
 This project allowed me to strengthen my understanding of full-stack development, from building interactive user interfaces to working with databases and integrating different technologies into a single application.
+
+You can access the preview of this project at this <a href="https://project-manager-git-main-brunos-projects-7c5d064a.vercel.app/">link</a>
 
 <h2 id="technologies">Technologies ⚡</h2>
 <ul>
